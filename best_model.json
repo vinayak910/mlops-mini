@@ -1,0 +1,8 @@
+{
+    "top_1": {
+        "model": "LogisticRegression",
+        "vectorizer": "BOW",
+        "f1_score": 0.793635486981678,
+        "run_id": "363cd3558d5b4aa5ac80dbe8151b7394"
+    }
+}

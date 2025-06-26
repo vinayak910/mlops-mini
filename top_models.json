@@ -1,0 +1,20 @@
+{
+    "top_1": {
+        "model": "LogisticRegression",
+        "vectorizer": "BOW",
+        "f1_score": 0.7942168674698795,
+        "run_id": "b1eb552c7c0e458ea4c36a266aa0d082"
+    },
+    "top_2": {
+        "model": "LogisticRegression",
+        "vectorizer": "TF-IDF",
+        "f1_score": 0.7907647907647908,
+        "run_id": "308228cc8afd4edbbd8a124b9a4d8c8d"
+    },
+    "top_3": {
+        "model": "MultinomialNB",
+        "vectorizer": "TF-IDF",
+        "f1_score": 0.787701317715959,
+        "run_id": "f99dce686e234cf596ff12e0ddb55d44"
+    }
+}
