@@ -1,0 +1,4 @@
+[core]
+    remote = localremote
+['remote "localremote"']
+    url = D:\12. MLOPS\2. MLOps Revisited by nitish sir\9.  Model serving\dvc_storage
