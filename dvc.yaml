@@ -33,7 +33,7 @@ stages:
     - data/processed
     outs:
     - model/model.pkl 
-  
+
   model_evaluation: 
     cmd: python src/model/model_evaluation.py 
     deps: 
@@ -41,4 +41,13 @@ stages:
     - src/model/model_evaluation.py
     metrics:
     - reports/metrics.json 
+    outs:
+    - reports/experiment_info.json
+
+  model_registeration:
+    cmd: python src/model/model_registeration.py
+    deps:
+    - reports/experiment_info.json
+    - src/model/model_registeration.py
+  
     
