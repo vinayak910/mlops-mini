@@ -29,3 +29,5 @@ flake8
 
 # For unit testing
 pytest
+
+nltk 
