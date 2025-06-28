@@ -1,37 +1,37 @@
 # Core ML & Data Science
-numpy
-pandas
-scikit-learn
-xgboost
+numpy==2.2.1
+pandas==2.2.3
+scikit-learn==1.6.1
+xgboost==3.0.2
 
 # Experiment Tracking
-mlflow
+mlflow==2.22.0
 
 # Version Control for Data and Models
-dvc
+dvc==3.58.0
 
 # AWS CLI (for cloud integration)
-awscli
+awscli==1.40.45
 
 # Optional: Logging, Serialization, Utility
-joblib
-PyYAML
+joblib==1.4.2
+PyYAML==6.0.2
 
 # CLI Enhancers (optional but nice for logs/scripts)
-tqdm
-click
+tqdm==4.67.1
+click==8.1.8
 
 # If you're using notebooks
-jupyter
+jupyter==1.1.1
 
 # If you want linting in CI/CD
-flake8
+flake8==7.3.0
 
 # For unit testing
-pytest
+pytest==8.4.1
 
-nltk 
+nltk==3.9.1
 
-dagshub 
+dagshub==0.5.10
 
-python-dotenv
+python-dotenv==1.1.1
