@@ -1,10 +1,31 @@
-# local package
--e .
+# Core ML & Data Science
+numpy
+pandas
+scikit-learn
+xgboost
 
-# external requirements
-click
-Sphinx
-coverage
+# Experiment Tracking
+mlflow
+
+# Version Control for Data and Models
+dvc
+
+# AWS CLI (for cloud integration)
 awscli
+
+# Optional: Logging, Serialization, Utility
+joblib
+PyYAML
+
+# CLI Enhancers (optional but nice for logs/scripts)
+tqdm
+click
+
+# If you're using notebooks
+jupyter
+
+# If you want linting in CI/CD
 flake8
-python-dotenv>=0.5.1
+
+# For unit testing
+pytest
