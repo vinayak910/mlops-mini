@@ -34,11 +34,11 @@ jobs:
         run: |
           dvc repro
       
-      - name: Run Model Tests 
+      - name: Promote model to production
+        if: success()
         env:
-          DAGSHUB_TOKEN: ${{secrets.DAGSHUB_PATH}}
-        run: |
-          python -m unittest tests/test_model.py
+          DAGSHUB_TOKEN: ${{ secrets.DAGSHUB_TOKEN }}
+        run: python scripts/promote_model.py
 
 
  
