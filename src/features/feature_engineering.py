@@ -4,6 +4,7 @@ import os
 from sklearn.feature_extraction.text import CountVectorizer
 import yaml 
 import logging 
+import pickle 
 
 logger = logging.getLogger('feature_engineering')
 logger.setLevel("DEBUG")
@@ -73,6 +74,8 @@ def apply_bow(train_data:pd.DataFrame,test_data:pd.DataFrame , max_features: int
 
         test_df = pd.DataFrame(X_test_bow.toarray())
         test_df['label'] = y_test
+
+        pickle.dump(vectorizer, open('model/vectorizer.pkl', 'wb'))
 
         logger.debug('BOW applied')
 

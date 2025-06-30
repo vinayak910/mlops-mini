@@ -1,10 +1,14 @@
 from flask import Flask, render_template,request
 import mlflow
-from flask_app.preprocessing_utility import normalize_text
+from preprocessing_utility import normalize_text
 import pickle
 import os
 import pandas as pd
 
+app = Flask(__name__)
+
+from dotenv import load_dotenv
+load_dotenv()
 # Set up DagsHub credentials for MLflow tracking
 dagshub_token = os.getenv("DAGSHUB_TOKEN")
 if not dagshub_token:
@@ -20,7 +24,6 @@ repo_name = "mlops-mini"
 # Set up MLflow tracking URI
 mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
 
-app = Flask(__name__)
 
 # load model from model registry
 def get_latest_model_version(model_name):
@@ -36,7 +39,7 @@ model_version = get_latest_model_version(model_name)
 model_uri = f'models:/{model_name}/{model_version}'
 model = mlflow.pyfunc.load_model(model_uri)
 
-vectorizer = pickle.load(open('models/vectorizer.pkl','rb'))
+vectorizer = pickle.load(open('model/vectorizer.pkl','rb'))
 
 @app.route('/')
 def home():
@@ -64,4 +67,4 @@ def predict():
     return render_template('index.html', result=result[0])
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,host= "0.0.0.0")
