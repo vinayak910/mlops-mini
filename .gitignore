@@ -94,3 +94,8 @@ target/
 myenv
 
 .env
+
+model/*
+
+#ignore vectorizer.pkl
+!model/vectorizer.pkl
